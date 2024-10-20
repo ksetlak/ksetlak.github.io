@@ -1,3 +1,8 @@
+/**
+ * This function (hopefully) unlocks the demo functionality of the CORS Anywhere app.
+ * I know this is **severely** *no bueno*, but I'll keep it around just for a while
+ * since I'm sure my tiny webpage won't cause much traffic.
+ */
 (async function unlock_proxy() {
   const response = await fetch(
     "https://cors-anywhere.herokuapp.com/https://example.com/",
