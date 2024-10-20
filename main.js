@@ -20,20 +20,16 @@
     const token = tokenInput ? tokenInput.value : null;
     if (!token)
       console.error("Proxy shenanigans have failed at token extraction.");
-    console.log(token); // TODO Remove once this works reliably.
     const tokenRequestResponse = await fetch(
       `https://cors-anywhere.herokuapp.com/corsdemo?accessRequest=${token}`
     );
     console.log(
       `Proxy shenanigans probably successful. Status: ${tokenRequestResponse.status}`
     );
-  } else if (response.ok) {
-    console.log(`Already authorized for proxy. (Status: ${response.status})`); // TODO Remove once this works reliably.
-  } else {
+  } else if (!response.ok) {
     console.error(
       `Proxy shenanigans have failed (not at token extraction). Status: ${response.status}`
     );
-    console.dir(response); // TODO Remove once this works reliably.
   }
 })();
 
@@ -51,4 +47,4 @@
       const div = document.getElementById("whatpulse");
       div.innerHTML = `Keys: ${data.Keys}<br>Clicks: ${data.Clicks}<br>Rank (Keys): ${data.Ranks.Keys}<br>Rank (Clicks): ${data.Ranks.Clicks}`;
     });
-})(); // Using IIFE, 'cos I'm so fancy!
+})();
