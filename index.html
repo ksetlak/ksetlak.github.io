@@ -22,6 +22,7 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="">
   <meta property="og:image" content=""> -->
+  <script src="dark_mode.js" defer></script>
   <script src="main.js" defer></script>
   <!-- FIXME: Fix the proxy unlocking in the WhatPulse script. -->
   <!-- <script src="whatpulse.js" defer></script> -->
@@ -29,15 +30,22 @@
 
 <body>
   <header>
-    <h1>Welcome to my personal website! (OK, webpage for now...)</h1>
+    <span id="header-span"><h1>Chris Setlak</h1></span>
+    <span>
+      <label id="dark-mode-switch-box">
+        <input id="dark-mode-switch-input" type="checkbox" checked="false">
+        <span id="dark-mode-switch"></span>
+      </label>
+      <span>The page adjusts to your system settings regarding dark mode, but you can override it.</span>
+    </span>
+  </header>
+  <main>
     <p>
       I've created it to practice HTML, because it's an excellent <mark>programming language</mark>!
       <br>
       <br>I can't wait until I know so much HTML I can write my own simple <em>operating system</em> in it!
       <br>(But let's keep it <strong>simple</strong>, I just want something like Linux... Not a major one like MacOS!)
     </p>
-  </header>
-  <main>
     <div>
       Pull my finger!
       <br><button onclick="alert('You\'re a hero!');">PULL!</button>
