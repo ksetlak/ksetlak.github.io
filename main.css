@@ -40,7 +40,7 @@ header div {
 }
 
 header div span {
-    text-wrap: pretty;
+    text-wrap: pretty;  /* FIXME: This propagates also to the name in the <h1> */
 }
 
 main {
@@ -54,12 +54,8 @@ aside {
     width: auto;
 }
 
-#header-div {
-    align-self: center;
-}
-
 h1 {
-    display: inline;
+    display: inline-block;
 }
 
 /*//////////////// /
