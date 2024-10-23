@@ -51,6 +51,7 @@ main {
 
 aside {
     display: inline-block;
+    vertical-align: top;
     width: auto;
 }
 
@@ -66,7 +67,6 @@ h1 {
     display: inline-block;
     width: 30px;
     height: 17px;
-    float: right;
 }
 
 #dark-mode-switch-box input {
