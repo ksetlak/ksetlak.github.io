@@ -1,7 +1,7 @@
 const URL =
   "https://corsproxy.io/?" +
   encodeURIComponent(
-    "https://api.whatpulse.org/user.php?user=Saviran&format=json"
+    "https://api.whatpulse.org/user.php?user=Saviran&format=json&" // No idea why, but the & at the end of the URL fixes WP API ignoring the last query parameter.
   );
 
 (function fill_whatpulse() {
